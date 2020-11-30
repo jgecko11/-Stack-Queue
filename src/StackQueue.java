@@ -1,4 +1,4 @@
-public class StackQueue {
+public class StackQueue<T>{
 
     Stack stackEnqueue;
     Stack stackDequeue;
@@ -9,5 +9,7 @@ public class StackQueue {
         stackDequeue = new Stack();
         stackEnqueue = new Stack();
     }
+
+
 
 }
