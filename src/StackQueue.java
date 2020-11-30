@@ -1,7 +1,16 @@
-public class StackQueue<T> {
 
-    Stack Stackenque = new Stack();
-    Stack Stackdeque = new Stack();
+public class StackQueue<T>{
+
+    Stack stackEnqueue;
+    Stack stackDequeue;
+    private int size;
+  
+    public StackQueue(){
+        size = 0;
+        stackDequeue = new Stack();
+        stackEnqueue = new Stack();
+    }
+
 
     public StackNode peekQueue(){
         Stack copyEnque = Stackenque;
@@ -22,5 +31,21 @@ public class StackQueue<T> {
             Stackenque.push(copyDeque.pop());
         }
         return returnable;
+
+
+
+    public int size(){
+        //returns number of nodes
+        return size;
+    }
+    public boolean isEmpty(){
+        //returns if there is nothing in the stack
+        return !(size>0);
+    }
+
+    public void push(T data){
+        stackEnqueue.push(data);
+
     }
 }
+
