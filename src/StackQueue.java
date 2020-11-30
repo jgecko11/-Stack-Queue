@@ -1,5 +1,3 @@
-import org.omg.CORBA.PUBLIC_MEMBER;
-
 public class StackQueue<T>{
 
     Stack stackEnqueue;
@@ -12,7 +10,17 @@ public class StackQueue<T>{
         stackEnqueue = new Stack();
     }
 
+    public int size(){
+        //returns number of nodes
+        return size;
+    }
+    public boolean isEmpty(){
+        //returns if there is nothing in the stack
+        return !(size>0);
+    }
+
     public void push(T data){
         stackEnqueue.push(data);
     }
 }
+
