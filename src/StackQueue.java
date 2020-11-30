@@ -1,4 +1,6 @@
-public class StackQueue {
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+public class StackQueue<T>{
 
     Stack stackEnqueue;
     Stack stackDequeue;
@@ -10,4 +12,7 @@ public class StackQueue {
         stackEnqueue = new Stack();
     }
 
+    public void push(T data){
+        stackEnqueue.push(data);
+    }
 }
