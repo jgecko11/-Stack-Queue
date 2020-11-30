@@ -1,8 +1,13 @@
 public class StackQueue {
 
-    Stack Stackenque = new Stack();
-    Stack Stackdeque = new Stack();
+    Stack stackEnqueue;
+    Stack stackDequeue;
+    private int size;
 
-
+    public StackQueue(){
+        size = 0;
+        stackDequeue = new Stack();
+        stackEnqueue = new Stack();
+    }
 
 }
