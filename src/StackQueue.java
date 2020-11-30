@@ -13,24 +13,25 @@ public class StackQueue<T>{
 
 
     public StackNode peekQueue(){
-        Stack copyEnque = Stackenque;
-        for(int i = 0;i<Stackenque.size();i++){
-            Stackdeque.push(copyEnque.pop());
+        Stack copyEnque = stackEnqueue;
+        for(int i = 0;i<stackDequeue.size();i++){
+            stackDequeue.push(copyEnque.pop());
         }
-        StackNode returnable =  Stackdeque.peek();
+        StackNode returnable =  stackDequeue.peek();
         return returnable;
     }
-    public StackNode popQueue(){
-        int size = Stackenque.size();
-        for(int i = 0;i<size;i++){
-            Stackdeque.push(Stackenque.pop());
+    public StackNode popQueue() {
+        int size = stackEnqueue.size();
+        for (int i = 0; i < size; i++) {
+            stackDequeue.push(stackEnqueue.pop());
         }
-        StackNode returnable =  Stackdeque.pop();
-        Stack copyDeque = Stackdeque;
-        for(int i = 0;i<Stackdeque.size();i++){
-            Stackenque.push(copyDeque.pop());
+        StackNode returnable = stackDequeue.pop();
+        Stack copyDeque = stackDequeue;
+        for (int i = 0; i < stackDequeue.size(); i++) {
+            stackEnqueue.push(copyDeque.pop());
         }
         return returnable;
+    }
 
 
 
