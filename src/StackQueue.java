@@ -19,4 +19,8 @@ public class StackQueue<T>{
         return !(size>0);
     }
 
+    public void push(T data){
+        stackEnqueue.push(data);
+    }
 }
+
